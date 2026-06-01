@@ -44,9 +44,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
       {/* Main pill */}
-      <nav className="bg-[#035925] rounded-full flex items-center justify-between px-6 py-3 shadow-lg">
+      <nav className="bg-[#035925] rounded-full flex items-center justify-between px-6 py-3 shadow-lg relative">
 
         {/* Logo + Nav links */}
         <div className="flex items-center gap-8">
@@ -75,7 +75,7 @@ export default function Navbar() {
         </div>
 
         {/* Countdown */}
-        <div className="hidden lg:flex items-center gap-3 text-white">
+        <div className="hidden xl:flex items-center gap-3 text-white absolute left-1/2 -translate-x-1/2">
           {[
             { value: days, label: "DAYS" },
             { value: hours, label: "HOURS" },

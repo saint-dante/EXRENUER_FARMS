@@ -105,7 +105,7 @@ export default function Faq() {
               <button
                 key={cat.id}
                 onClick={() => { setActiveCategory(cat.id); setOpenQuestion(0) }}
-                className={`text-left py-4 border-b border-black/10 transition-colors ${i === 0 ? "border-t" : ""}`}
+                className={`text-left py-4 border-b border-black/10 transition-colors cursor-pointer ${i === 0 ? "border-t" : ""}`}
               >
                 <p className={`text-sm font-bold ${activeCategory === cat.id ? "text-black" : "text-black/30"}`}>
                   {cat.label}
@@ -140,7 +140,7 @@ export default function Faq() {
               <div key={i} className="bg-white rounded-xl px-5">
                 <button
                   onClick={() => setOpenQuestion(openQuestion === i ? -1 : i)}
-                  className="w-full flex justify-between items-center py-4 text-left gap-4"
+                  className="w-full flex justify-between items-center py-4 text-left gap-4 cursor-pointer"
                 >
                   <span className="text-sm font-bold text-black">{item.q}</span>
                   <span className={`text-lg flex-shrink-0 font-light transition-colors ${openQuestion === i ? "text-[#035925]" : "text-black/40"}`}>

@@ -3,8 +3,8 @@ import { FaSeedling } from "react-icons/fa6"
 
 export default function GreenCta() {
   return (
-    <section className="bg-[#035925] px-20 pt-16 pb-10 flex flex-col justify-end min-h-[240px]">
-      <div className="max-w-5xl flex flex-col gap-4">
+    <section className="bg-[#035925] px-4 pt-16 pb-10 flex flex-col justify-end min-h-[240px]">
+      <div className="max-w-7xl mx-auto w-full flex flex-col gap-4">
         <p className="text-[23px] md:text-[32px] font-medium text-white leading-snug">
           &ldquo;The land is here. The need is here. The time is now.&rdquo;
         </p>

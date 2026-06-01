@@ -48,7 +48,7 @@ export default function SeedsOfKnowledge() {
 
   return (
     <section className="bg-white px-6 py-20 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         {/* Top row: badge + heading + arrows */}
         <div className="flex items-start justify-between gap-6 mb-4">
@@ -90,13 +90,13 @@ export default function SeedsOfKnowledge() {
         <div
           ref={scrollRef}
           onScroll={onScroll}
-          className="flex gap-5 overflow-x-auto scroll-smooth pb-2 -mx-6 px-6 md:mx-0 md:px-0"
+          className="flex gap-5 overflow-x-auto scroll-smooth pb-2 -mx-6 px-6 md:-mx-0 md:px-0"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {articles.map((article) => (
             <div
               key={article.title}
-              className="flex-none w-[300px] md:w-[340px] rounded-2xl border border-black/8 overflow-hidden flex flex-col"
+              className="flex-none w-[85vw] sm:w-[380px] md:w-[410px] rounded-2xl border border-black/8 overflow-hidden flex flex-col"
             >
               {/* Image placeholder */}
               <div className="h-52 bg-black/6 w-full" />

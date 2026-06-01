@@ -42,12 +42,12 @@ export default function WaitlistCountdown() {
         </span>
 
         {/* Heading */}
-        <h2 className="text-xl md:text-2xl font-medium text-black leading-tight">
+        <h2 className="text-2xl md:text-4xl font-medium text-black leading-tight">
           Your Window to Join<br />the First Wave is Closing
         </h2>
 
         {/* Description */}
-        <p className="text-sm  text-black/55 leading-relaxed max-w-lg">
+        <p className="text-base text-black/55 leading-relaxed max-w-lg">
           The waitlist is open. The projects are ready. The land is being prepared. But the first wave of farmers and investors who get in early will have an advantage that latecomers simply cannot access. Do not wait until the fields are full.
         </p>
 

@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="relative z-10 h-24" />
 
       {/* Bottom content */}
-      <div className="relative z-10 px-8 pb-10 flex flex-col gap-6">
+      <div className="relative z-10 px-8 pb-10 flex flex-col gap-6 max-w-7xl mx-auto w-full">
         {/* Two-column bottom row */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
           {/* Left */}
@@ -54,7 +54,7 @@ export default function Hero() {
           </div>
 
           {/* Right: large tagline */}
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white text-right leading-tight">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white text-left md:text-right leading-tight">
             The Land is<br />
             Ready.<br />
             Are You?

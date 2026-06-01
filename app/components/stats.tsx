@@ -31,9 +31,9 @@ const stats = [
 export default function Stats() {
   return (
     <section className="bg-white px-8 py-32">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-        {stats.map((stat) => (
-          <div key={stat.label} className="flex flex-col gap-3">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-0 md:justify-items-center">
+        {stats.map((stat, i) => (
+          <div key={stat.label} className={`flex flex-col gap-3 ${i === 2 ? "col-span-2 md:col-span-1" : ""}`}>
             <FaSeedling size={20} className="text-[#035925]" />
             <CountUp
               to={stat.to}

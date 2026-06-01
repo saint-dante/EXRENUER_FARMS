@@ -2,8 +2,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { FaSeedling } from "react-icons/fa6"
-import { motion, useInView, type Variants } from "framer-motion"
-import { useRef } from "react"
 import CountUp from "./count-up"
 
 const farms = [
@@ -45,36 +43,15 @@ const farms = [
   },
 ]
 
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.05,
-    },
-  },
-}
-
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
-  },
-}
-
 export default function OurFields() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, margin: "-100px" })
 
   return (
     <section id="farms" className="bg-white px-10 py-12">
       {/* Header */}
-      <div className="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-14">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 mb-24">
 
         {/* Left */}
-        <div className="flex flex-col justify-between gap-4 mr-[140px]">
+        <div className="flex flex-col justify-between gap-8">
           <span className="inline-flex items-center gap-2 text-sm text-black font-medium border border-black/15 rounded-full px-4 py-1.5 w-fit">
             <FaSeedling size={13} className="text-[#035925]" />
             Our Fields
@@ -87,7 +64,7 @@ export default function OurFields() {
 
         {/* Right */}
         <div className="flex flex-col justify-between gap-7">
-          <p className="text-sm text-black/70 leading-relaxed">
+          <p className="text-base text-black/70 leading-relaxed">
             Each project is named after a land of abundance in Scripture — because we believe the same God who blessed those fields is blessing these ones. Every farm is a specific territory, a specific crop and a specific invitation to be part of something historic in Anambra State, Nigeria.
           </p>
           <Link
@@ -102,19 +79,10 @@ export default function OurFields() {
       </div>
 
       {/* Farm Cards */}
-      <motion.div
-        ref={ref}
-        className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:max-w-5xl lg:mx-auto w-full"
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto w-full">
         {farms.map((farm) => (
-          <motion.div
+          <div
             key={farm.name}
-            variants={cardVariants}
-            whileHover={{ scale: 1.03, y: -8 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
             className="relative rounded-xl overflow-hidden min-h-[400px] flex flex-col justify-between cursor-pointer"
           >
             {/* Background image */}
@@ -174,9 +142,9 @@ export default function OurFields() {
               </Link>
             </div>
 
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   )
 }
