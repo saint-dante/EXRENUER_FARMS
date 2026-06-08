@@ -4,8 +4,9 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
+@theme {
   --font-sans: var(--font-instrument-sans);
+  --max-width-7xl: 80rem;
 }
 
 body {

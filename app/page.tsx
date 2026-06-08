@@ -1,15 +1,15 @@
 import Hero from "./components/hero"
 import Scale from "./components/scale"
 import OurFields from "./components/ourFields"
-import MidCta from "./components/mid-cta"
-import WhyNigeria from "./components/why-nigeria"
+import MidSection from "./components/midSection"
+import WhyNigeria from "./components/whyNigeria"
 import Stats from "./components/stats"
-import GreenCta from "./components/green-cta"
+import GreenSection from "./components/greenSection"
 import Faq from "./components/faq"
-import SeedsOfKnowledge from "./components/seeds-of-knowledge"
-import WaitlistCountdown from "./components/waitlist-countdown"
-import PreFooterCta from "./components/pre-footer-cta"
-import FadeIn from "./components/fade-in"
+import SeedsOfKnowledge from "./components/seedsOfKnowledge"
+import WaitlistCountdown from "./components/waitlistCountdown"
+import PreFooterSection from "./components/preFooterSection"
+import FadeIn from "./components/fadeIn"
 
 export default function Home() {
   return (
@@ -17,14 +17,14 @@ export default function Home() {
       <Hero />
       <FadeIn><Scale /></FadeIn>
       <FadeIn><OurFields /></FadeIn>
-      <FadeIn><MidCta /></FadeIn>
+      <FadeIn><MidSection /></FadeIn>
       <FadeIn><WhyNigeria /></FadeIn>
       <FadeIn><Stats /></FadeIn>
-      <FadeIn><GreenCta /></FadeIn>
+      <FadeIn><GreenSection /></FadeIn>
       <FadeIn><Faq /></FadeIn>
       <FadeIn><SeedsOfKnowledge /></FadeIn>
       <FadeIn><WaitlistCountdown /></FadeIn>
-      <FadeIn><PreFooterCta /></FadeIn>
+      <FadeIn><PreFooterSection /></FadeIn>
     </>
   )
 }

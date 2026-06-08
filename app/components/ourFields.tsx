@@ -2,7 +2,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { FaSeedling } from "react-icons/fa6"
-import CountUp from "./count-up"
 
 const farms = [
   {
@@ -113,14 +112,9 @@ export default function OurFields() {
               {/* Stats */}
               <div className="flex items-start justify-center divide-x divide-white/20 text-white">
                 <div className="pr-4 space-y-0.5">
-                  <CountUp
-                    to={farm.budgetTo}
-                    prefix={farm.budgetPrefix}
-                    suffix={farm.budgetSuffix}
-                    decimals={farm.budgetDecimals}
-                    duration={4500}
-                    className="text-sm font-semibold"
-                  />
+                  <p className="text-sm font-semibold">
+                    {farm.budgetPrefix}{farm.budgetDecimals > 0 ? farm.budgetTo.toFixed(farm.budgetDecimals) : farm.budgetTo}{farm.budgetSuffix}
+                  </p>
                   <p className="text-[11px] text-white/60">Farm Budget</p>
                 </div>
                 <div className="px-4 space-y-0.5">

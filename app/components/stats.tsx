@@ -1,5 +1,4 @@
 import { FaSeedling } from "react-icons/fa6"
-import CountUp from "./count-up"
 
 const stats = [
   {
@@ -35,13 +34,9 @@ export default function Stats() {
         {stats.map((stat, i) => (
           <div key={stat.label} className={`flex flex-col gap-3 ${i === 2 ? "col-span-2 md:col-span-1" : ""}`}>
             <FaSeedling size={20} className="text-[#035925]" />
-            <CountUp
-              to={stat.to}
-              prefix={stat.prefix}
-              suffix={stat.suffix}
-              decimals={stat.decimals}
-              className="text-[56px] font-medium text-black leading-none"
-            />
+            <p className="text-[56px] font-medium text-black leading-none">
+              {stat.prefix}{stat.decimals > 0 ? stat.to.toFixed(stat.decimals) : stat.to}{stat.suffix}
+            </p>
             <p className="text-sm font-bold text-black">{stat.label}</p>
             <p className="text-sm text-black/50">{stat.description}</p>
           </div>

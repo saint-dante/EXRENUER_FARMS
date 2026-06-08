@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { FaSeedling } from "react-icons/fa6"
 
-export default function GreenCta() {
+export default function GreenSection() {
   return (
     <section className="bg-[#035925] px-4 pt-16 pb-10 flex flex-col justify-end min-h-[240px]">
       <div className="max-w-7xl mx-auto w-full flex flex-col gap-4">

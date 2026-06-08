@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { FaSeedling } from "react-icons/fa6"
 
-export default function MidCta() {
+export default function MidSection() {
   return (
     <section className="bg-white px-4 py-20">
       <div className="max-w-7xl mx-auto w-full flex flex-col gap-8">
